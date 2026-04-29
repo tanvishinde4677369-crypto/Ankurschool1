@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankur: The Learning Hub</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #5f27cd;
+    --accent: #ff9f43;
+    --green: #1dd1a1;
+    --bg: #fffcf5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: var(--primary);
+}
+
+/* Buttons */
+button {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid var(--primary);
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Panels */
+.panel {
+    display: none;
+    padding: 20px;
+}
+
+.show {
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="Logo.png" class="logo">
+    <h2>ANKUR</h2>
+</header>
+
+<section class="hero">
+    <h1>ANKUR</h1>
+    <p>THE LEARNING HUB</p>
+</section>
+
+<center>
+    <button onclick="toggle('about')">ABOUT</button>
+    <div id="about" class="panel">
+        <p>Joyful learning for kids with no pressure.</p>
+    </div>
+
+    <button onclick="toggle('course')">COURSES</button>
+    <div id="course" class="panel">
+        <p>Playgroup, Nursery, Jr.KG, Sr.KG</p>
+    </div>
+
+    <button onclick="toggle('contact')">CONTACT</button>
+    <div id="contact" class="panel">
+        <p>Phone: 9082137372</p>
+    </div>
+</center>
+
+<script>
+function toggle(id) {
+    document.getElementById(id).classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
